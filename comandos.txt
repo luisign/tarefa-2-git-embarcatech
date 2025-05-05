@@ -1,0 +1,23 @@
+Aluno: Luís Guilherme de Souza Coutinho
+
+mkdir tarefa-unidade-2
+cd tarefa-unidade-2
+git clone https://gitlab.com/mizael.cortez/curso-branchs-ifrn-ead
+cd curso-branchs-ifrn-ead
+echo "Uma linha qualquer de conteúdo." > texto.txt
+git add texto.txt
+git commit -m "Adicionando texto.txt na main"
+git checkout -b feature-1
+echo "Alterando esse texto" > texto.txt
+git add texto.txt
+git commit -m "Alterando texto.txt na feature-1"
+git checkout main
+echo "Alterando o texto de novo" > texto.txt
+git add texto.txt
+git commit -m "Alterando texto.txt na main de novo"
+git merge feature-1
+git add texto.txt
+git commit -m "Resolvendo conflito entre main e feature-1 após merge no texto.txt"
+git checkout -b add-comandos
+history | grep git
+history | grep git > comandos.txt
